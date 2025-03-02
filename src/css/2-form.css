@@ -1,0 +1,58 @@
+.btn {
+    display: block;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 16px;
+    background-color: #4e75ff;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #6c8cff;
+}
+
+input, textarea {
+    display: block;
+    padding: 8px 16px;
+    width: 360px;
+    height: 40px;
+    border: 1px solid #808080;
+    border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+}
+
+.feedback-form {
+    width: 360px;
+    margin: 24px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-label+.form-label {
+    margin-bottom: 16px;
+}
+
+.form-input {
+    margin-top: 8px;
+}
+
+.form-input:hover,
+.form-input:focus {
+    border-color: #000;
+}
+
+.message {
+    height: 80px;
+    resize: none;
+}
