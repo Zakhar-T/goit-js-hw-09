@@ -3,11 +3,12 @@ const formData = {
     message: "",
 };
 const formEl = document.querySelector(".feedback-form");
-let email = formEl.elements.email.value;
-let message = formEl.elements.message.value;
+let emailEl = formEl.elements.email;
+let messageEl = formEl.elements.message;
 
-email = JSON.parse(localStorage.getItem("feedback-form-state")).email ?? "";
-message = JSON.parse(localStorage.getItem("feedback-form-state")).message ?? "";
+const storageData = JSON.parse(localStorage.getItem("feedback-form-state")) || formData;
+emailEl.value = storageData.email;
+messageEl.value = storageData.message;
 
 formEl.addEventListener("input", handleInput);
 
@@ -23,7 +24,7 @@ function handleInput(event) {
 
 formEl.addEventListener("submit", (evt) => {
     evt.preventDefault();
-    if (email === "" || message === "") {
+    if (emailEl.value === "" || messageEl.value === "") {
         alert("Please, fill all fields");
         return;
     }
